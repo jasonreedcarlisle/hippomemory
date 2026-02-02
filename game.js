@@ -1320,12 +1320,23 @@ class MemoryGame {
         const resetLink = document.getElementById('reset-today-link');
         if (!resetLink) return;
         
+        const hostname = window.location.hostname;
+        const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.') || hostname.startsWith('10.');
+        const isStaging = hostname.includes('staging');
+        const isProduction = hostname.includes('memorlock.com') && !isStaging; // Exclude staging from production check
+        
+        // Only show link on localhost or staging, never in production
+        if (isProduction) {
+            resetLink.style.display = 'none';
+            return;
+        }
+        
         const progress = dailyManager.getUserProgress();
         const completion = dailyManager.checkCompletion(dayNumber, progress.lastPlayedDifficulty || 'medium');
         const hasInProgress = dailyManager.hasInProgressGame(dayNumber);
         
-        // Show link if user has completed or has in-progress game today
-        if (completion.completed || hasInProgress) {
+        // Show link if on localhost or staging, and user has completed or has in-progress game
+        if ((isLocal || isStaging) && (completion.completed || hasInProgress)) {
             resetLink.style.display = 'inline-block';
         } else {
             resetLink.style.display = 'none';
