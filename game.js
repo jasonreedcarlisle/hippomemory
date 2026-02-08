@@ -787,7 +787,7 @@ class MemoryGame {
         const progress = dailyManager.getUserProgress();
         shareLines.push(`Streak: ${progress.winStreak || 0}`);
         shareLines.push('');
-        shareLines.push('Play at: memorlock.com');
+        shareLines.push('Play at: hippomemory.com');
         
         const shareText = shareLines.join('\n');
         
@@ -902,7 +902,7 @@ class MemoryGame {
         const progress = dailyManager.getUserProgress();
         shareLines.push(`Streak: ${progress.winStreak || 0}`);
         shareLines.push('');
-        shareLines.push('Play at: memorlock.com');
+        shareLines.push('Play at: hippomemory.com');
         
         return shareLines.join('\n');
     }
@@ -1323,7 +1323,7 @@ class MemoryGame {
         const hostname = window.location.hostname;
         const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.') || hostname.startsWith('10.');
         const isStaging = hostname.includes('staging');
-        const isProduction = hostname.includes('memorlock.com') && !isStaging; // Exclude staging from production check
+        const isProduction = hostname.includes('hippomemory.com') && !isStaging; // Exclude staging from production check
         
         // Only show link on localhost or staging, never in production
         if (isProduction) {

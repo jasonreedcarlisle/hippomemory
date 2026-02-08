@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Memorlock Deployment Tool
+ * Hippomemory Deployment Tool
  * Simple script to handle deployments to staging and production
  */
 
@@ -95,7 +95,7 @@ async function deployToStaging() {
   deployToServer('staging');
   
   console.log('\n✅ Staging deployment complete!');
-  console.log('🌐 Test at: https://staging.memorlock.com');
+  console.log('🌐 Test at: https://staging.hippomemory.com');
 }
 
 async function deployToProduction() {
@@ -115,7 +115,7 @@ async function deployToProduction() {
   deployToServer('staging');
   
   // Ask for confirmation before production
-  console.log('\n⚠️  Staging deployed. Please test at https://staging.memorlock.com');
+  console.log('\n⚠️  Staging deployed. Please test at https://staging.hippomemory.com');
   const confirm = await question('\nDeploy to PRODUCTION? (yes/no): ');
   if (confirm.toLowerCase() !== 'yes') {
     console.log('❌ Production deployment cancelled.');
@@ -130,11 +130,11 @@ async function deployToProduction() {
   deployToServer('production');
   
   console.log('\n✅ Production deployment complete!');
-  console.log('🌐 Live at: https://memorlock.com');
+  console.log('🌐 Live at: https://hippomemory.com');
 }
 
 async function main() {
-  console.log('\n🎮 Memorlock Deployment Tool');
+  console.log('\n🎮 Hippomemory Deployment Tool');
   console.log('='.repeat(50));
   console.log('1. Deploy to Staging');
   console.log('2. Deploy to Production (via Staging)');

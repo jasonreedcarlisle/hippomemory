@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'memorlock-production',
+      name: 'hippomemory-production',
       script: './index.js',
       cwd: '/home/ubuntu/hippomemory-production',
       instances: 1,
@@ -10,8 +10,8 @@ module.exports = {
         NODE_ENV: 'production',
         PORT: 3001
       },
-      error_file: '/home/ubuntu/logs/memorlock-production-error.log',
-      out_file: '/home/ubuntu/logs/memorlock-production-out.log',
+      error_file: '/home/ubuntu/logs/hippomemory-production-error.log',
+      out_file: '/home/ubuntu/logs/hippomemory-production-out.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
       autorestart: true,
@@ -19,7 +19,7 @@ module.exports = {
       max_memory_restart: '500M'
     },
     {
-      name: 'memorlock-staging',
+      name: 'hippomemory-staging',
       script: './index.js',
       cwd: '/home/ubuntu/hippomemory-staging',
       instances: 1,
@@ -28,8 +28,8 @@ module.exports = {
         NODE_ENV: 'staging',
         PORT: 3002
       },
-      error_file: '/home/ubuntu/logs/memorlock-staging-error.log',
-      out_file: '/home/ubuntu/logs/memorlock-staging-out.log',
+      error_file: '/home/ubuntu/logs/hippomemory-staging-error.log',
+      out_file: '/home/ubuntu/logs/hippomemory-staging-out.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
       autorestart: true,

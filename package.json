@@ -1,7 +1,7 @@
 {
-  "name": "memorlock",
+  "name": "hippomemory",
   "version": "1.0.0",
-  "description": "Memorlock - Daily Memory Challenge",
+  "description": "Hippomemory - Daily Memory Challenge",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

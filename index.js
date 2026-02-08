@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Memorlock - Daily Memory Challenge Game
+ * Hippomemory - Daily Memory Challenge Game
  * Simple HTTP server to serve the game
  */
 
@@ -95,7 +95,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`\n🎮 Memorlock - Daily Memory Challenge`);
+  console.log(`\n🎮 Hippomemory - Daily Memory Challenge`);
   console.log(`📡 Server running on port ${PORT}`);
   console.log(`🌍 Environment: ${NODE_ENV}`);
   if (NODE_ENV === 'development') {
