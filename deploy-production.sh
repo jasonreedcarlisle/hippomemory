@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Deployment script for Memorlock Production
+# Deployment script for Hippo Daily Production
 # This script pulls the latest code from GitHub and restarts the PM2 process
 
 set -e  # Exit on any error
@@ -23,13 +23,13 @@ fi
 
 # Restart PM2 process
 echo "🔄 Restarting PM2 process..."
-pm2 restart memorlock-production
+pm2 restart hippomemory-production
 
 # Show status
 echo "✅ Deployment complete!"
-pm2 status memorlock-production
+pm2 status hippomemory-production
 
 echo ""
-echo "📊 View logs with: pm2 logs memorlock-production"
+echo "📊 View logs with: pm2 logs hippomemory-production"
 echo "📈 Monitor with: pm2 monit"
 

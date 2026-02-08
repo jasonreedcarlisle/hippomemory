@@ -1,5 +1,21 @@
 # Hippo Daily Deployment Guide
 
+## Quick Reference
+
+```bash
+cd hippomemory
+
+# Deploy to staging
+node deploy.js staging
+
+# Deploy to production
+node deploy.js production
+```
+
+Or via npm: `npm run deploy:staging` | `npm run deploy:production`
+
+---
+
 This document provides instructions for deploying Hippo Daily (Hippomemory) to Amazon Lightsail.
 
 ## Prerequisites

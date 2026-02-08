@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Deployment script for Memorlock Staging
+# Deployment script for Hippo Daily Staging
 # This script pulls the latest code from GitHub and restarts the PM2 process
 
 set -e  # Exit on any error
@@ -23,13 +23,13 @@ fi
 
 # Restart PM2 process
 echo "🔄 Restarting PM2 process..."
-pm2 restart memorlock-staging
+pm2 restart hippomemory-staging
 
 # Show status
 echo "✅ Deployment complete!"
-pm2 status memorlock-staging
+pm2 status hippomemory-staging
 
 echo ""
-echo "📊 View logs with: pm2 logs memorlock-staging"
+echo "📊 View logs with: pm2 logs hippomemory-staging"
 echo "📈 Monitor with: pm2 monit"
 
